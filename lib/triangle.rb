@@ -9,7 +9,7 @@ class Triangle
   end
 
   def kind
-    valid_triagle
+    valid_triangle
       if a == b && a == c
           :equilateral
       elsif a == b || a == c || b == c
@@ -19,7 +19,7 @@ class Triangle
       end
   end
 
-  def valid_triagle
+  def valid_triangle
     real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
     [a, b, c].each do |side|
       real_triangle << false if side <= 0
